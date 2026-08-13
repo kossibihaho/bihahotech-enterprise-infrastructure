@@ -1,6 +1,5 @@
 # =====================================================================
 # Script de création de la structure AD - bihahotech.local
-# À exécuter sur DC01, dans PowerShell (ISE) en tant qu'Administrateur
 # =====================================================================
 
 Import-Module ActiveDirectory
