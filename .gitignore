@@ -1,1 +1,22 @@
+# Sauvegardes de configuration (contiennent hash mots de passe, clés)
+docs/Network/backups/*.xml
+**/*.xml.bak
 
+# Fichiers de mots de passe / credentials
+**/credentials.*
+**/*password*
+**/*.env
+.env.local
+
+# Clés privées / certificats
+*.key
+*.pem
+*.pfx
+*.p12
+
+# Scripts contenant des mots de passe en dur
+scripts/**/secrets-*.ps1
+
+# Exports de VM (peuvent contenir des données)
+*.ova
+*.vdi
