@@ -29,7 +29,7 @@ New-ADGroup -Name "GG_ADMINISTRATEURS" -GroupScope Global -GroupCategory Securit
 Write-Host "Groupes créés" -ForegroundColor Green
 
 # --- 4. Mot de passe temporaire commun (à changer à la 1re connexion) --
-$password = ConvertTo-SecureString "P@ssw0rd2026!" -AsPlainText -Force
+$password = ConvertTo-SecureString "*************" -AsPlainText -Force
 
 # --- 5. Création des utilisateurs --------------------------------------
 New-ADUser -Name "Kossi Bihaho" -SamAccountName "k.bihaho" `
