@@ -1,0 +1,38 @@
+services:
+  wikijs-db:
+    image: postgres:15-alpine
+    container_name: wikijs-db
+    restart: unless-stopped
+    volumes:
+      - wikijs_db_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=wikijs
+      - POSTGRES_USER=wikijs
+      - POSTGRES_PASSWORD=CHANGE_ME_DB_PASSWORD
+    networks:
+      - wikijs_net
+
+  wikijs-app:
+    image: requarks/wiki:2
+    container_name: wikijs-app
+    restart: unless-stopped
+    ports:
+      - "8081:3000"
+    environment:
+      - DB_TYPE=postgres
+      - DB_HOST=wikijs-db
+      - DB_PORT=5432
+      - DB_USER=wikijs
+      - DB_PASS=CHANGE_ME_DB_PASSWORD
+      - DB_NAME=wikijs
+    depends_on:
+      - wikijs-db
+    networks:
+      - wikijs_net
+
+networks:
+  wikijs_net:
+    driver: bridge
+
+volumes:
+  wikijs_db_data:
