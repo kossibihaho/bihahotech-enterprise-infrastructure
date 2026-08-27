@@ -1,24 +1,42 @@
-server {
-    listen 80;
-    server_name nextcloud.bihahotech.local;
-    return 301 https://$host$request_uri;
-}
+services:
+  nextcloud-db:
+    image: mariadb:11
+    container_name: nextcloud-db
+    restart: unless-stopped
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    volumes:
+      - nextcloud_db_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=CHANGE_ME_ROOT_PASSWORD
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=CHANGE_ME_DB_PASSWORD
+    networks:
+      - nextcloud_net
 
-server {
-    listen 443 ssl;
-    server_name nextcloud.bihahotech.local;
+  nextcloud-app:
+    image: nextcloud:latest
+    container_name: nextcloud-app
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - nextcloud_data:/var/www/html
+    environment:
+      - MYSQL_HOST=nextcloud-db
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=CHANGE_ME_DB_PASSWORD
+      - NEXTCLOUD_TRUSTED_DOMAINS=192.168.10.20 nextcloud.bihahotech.local
+    depends_on:
+      - nextcloud-db
+    networks:
+      - nextcloud_net
 
-    ssl_certificate /etc/nginx/ssl/bihahotech-selfsigned.crt;
-    ssl_certificate_key /etc/nginx/ssl/bihahotech-selfsigned.key;
+networks:
+  nextcloud_net:
+    driver: bridge
 
-    client_max_body_size 512M;
-
-    location / {
-        proxy_pass http://127.0.0.1:8080;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto https;
-        proxy_redirect off;
-    }
-}
+volumes:
+  nextcloud_db_data:
+  nextcloud_data:
