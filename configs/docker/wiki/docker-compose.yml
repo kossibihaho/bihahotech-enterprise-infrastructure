@@ -8,7 +8,7 @@ services:
     environment:
       - POSTGRES_DB=wikijs
       - POSTGRES_USER=wikijs
-      - POSTGRES_PASSWORD=CHANGE_ME_DB_PASSWORD
+      - POSTGRES_PASSWORD=********
     networks:
       - wikijs_net
 
@@ -23,7 +23,7 @@ services:
       - DB_HOST=wikijs-db
       - DB_PORT=5432
       - DB_USER=wikijs
-      - DB_PASS=CHANGE_ME_DB_PASSWORD
+      - DB_PASS=********
       - DB_NAME=wikijs
     depends_on:
       - wikijs-db
