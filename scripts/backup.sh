@@ -45,4 +45,11 @@ borg prune \
     "$BORG_REPO" \
     >> "$LOGFILE" 2>&1
 
+# --- 6. Répliquer le dépôt Borg vers MONITOR01 (copie secondaire) ---
+rsync -avz --delete \
+    -e "ssh -i /home/bihaho/.ssh/backup_key" \
+    ~/backups/borg-repo/ \
+    bihaho@192.168.10.30:~/backups-srv-linux01/borg-repo/ \
+    >> "$LOGFILE" 2>&1
+
 echo "=== Sauvegarde terminée : $(date +%Y-%m-%d_%H-%M) ===" >> "$LOGFILE"
