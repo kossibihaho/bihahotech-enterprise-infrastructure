@@ -7,10 +7,10 @@ services:
     volumes:
       - nextcloud_db_data:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=CHANGE_ME_ROOT_PASSWORD
+      - MYSQL_ROOT_PASSWORD=********
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
-      - MYSQL_PASSWORD=CHANGE_ME_DB_PASSWORD
+      - MYSQL_PASSWORD=********
     networks:
       - nextcloud_net
 
@@ -26,7 +26,7 @@ services:
       - MYSQL_HOST=nextcloud-db
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
-      - MYSQL_PASSWORD=CHANGE_ME_DB_PASSWORD
+      - MYSQL_PASSWORD=********
       - NEXTCLOUD_TRUSTED_DOMAINS=192.168.10.20 nextcloud.bihahotech.local
     depends_on:
       - nextcloud-db
