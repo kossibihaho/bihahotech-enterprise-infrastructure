@@ -8,7 +8,7 @@
 set -e
 
 export BORG_REPO=~/backups/borg-repo
-export BORG_PASSPHRASE='CHANGE_ME_BORG_PASSPHRASE'
+export BORG_PASSPHRASE='********'
 
 DATE=$(date +%Y-%m-%d_%H-%M)
 LOGFILE=~/backups/backup.log
@@ -17,7 +17,7 @@ echo "=== Sauvegarde démarrée : $DATE ===" >> "$LOGFILE"
 
 # --- 1. Dump des bases de données AVANT la sauvegarde des fichiers ---
 # Nextcloud (MariaDB)
-docker exec nextcloud-db mysqldump -u nextcloud -pCHANGE_ME_DB_PASSWORD nextcloud > ~/backups/dumps/nextcloud-db.sql 2>> "$LOGFILE"
+docker exec nextcloud-db mysqldump -u nextcloud -p******** nextcloud > ~/backups/dumps/nextcloud-db.sql 2>> "$LOGFILE"
 
 # Wiki.js (PostgreSQL)
 docker exec wikijs-db pg_dump -U wikijs wikijs > ~/backups/dumps/wikijs-db.sql 2>> "$LOGFILE"
