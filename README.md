@@ -56,7 +56,7 @@ Le pare-feu **PFSENSE01** sépare le WAN (accès Internet via l'adaptateur Bridg
 
 ---
 
-## Machines du lab
+## Machines
 
 | Machine | Rôle | IP | OS |
 |---|---|---|---|
