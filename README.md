@@ -1,8 +1,7 @@
-# BihahoTech — Infrastructure d'entreprise (projet de lab)
+# BihahoTech — Infrastructure d'entreprise
 
 Simulation complète d'une infrastructure informatique d'entreprise fictive (**BihahoTech**), construite de zéro dans VirtualBox : réseau, Active Directory, services applicatifs, supervision, sécurité, sauvegardes et VPN.
 
-> Projet pédagogique / portfolio DevOps & Administration Système — domaine `bihahotech.local`
 
 ---
 
