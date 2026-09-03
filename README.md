@@ -93,29 +93,42 @@ Toutes les VM communiquent via le réseau interne VirtualBox `LAN-BIHAHO`, isol�
 ```
 bihahotech-enterprise-infrastructure/
 │
-├── docs/
-│   ├── Architecture/
-│   ├── Network/
-│   │   └── backups/        # Sauvegardes config pfSense (exclu de Git)
-│   ├── Installation/
-│   ├── Administration/
-│   └── Disaster-Recovery/
-│
-├── docker/
-│   ├── nextcloud/
-│   ├── nginx/
-│   ├── portainer/
-│   └── wikijs/
-│
-├── scripts/
-│   ├── backup/
-│   ├── monitoring/
-│   └── maintenance/
-│
-├── diagrams/
-├── images/
 ├── .gitignore
-└── README.md
+├── README.md
+│
+├── Docs/
+│   ├── software.md
+│   ├── architecture.md
+│   ├── plan-adressage-ip.md
+│   ├── installation-pfsense.md
+│   ├── installation-dc01.md
+│   ├── installation-srv-linux01.md
+│   ├── installation-monitor01.md
+│   ├── gestion-utilisateurs-groupes.md
+│   ├── gestion-gpo.md
+│   └── procedure-restauration-borgbackup.md
+│
+├── configs/
+│   └── docker/
+│       ├── nextcloud/
+│       │   └── docker-compose.yml
+│       ├── portainer/
+│       │   └── docker-compose.yml
+│       ├── wiki/
+│       │   └── docker-compose.yml
+│       ├── nginx/
+│       │   ├── nextcloud.conf
+│       │   ├── wiki.conf
+│       │   └── portainer.conf
+│       └── monitoring/
+│           ├── docker-compose.yml
+│           ├── prometheus.yml
+│           └── alertmanager.yml
+│
+└── scripts/
+    ├── setup-ad-bihahotech.ps1
+    ├── setup-gpo-bihahotech.ps1
+    └── backup.sh
 ```
 
 ---
