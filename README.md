@@ -8,7 +8,7 @@ Simulation complète d'une infrastructure informatique d'entreprise fictive (**B
 ## Sommaire
 
 - [Architecture](#architecture)
-- [Machines du lab](#machines-du-lab)
+- [Machines utilisées](#machines-du-lab)
 - [Stack technique](#stack-technique)
 - [Structure du dépôt](#structure-du-dépôt)
 - [Phases du projet](#phases-du-projet)
