@@ -21,12 +21,12 @@ scrape_configs:
     static_configs:
       - targets: ["node-exporter:9100"]
 
-  # SRV-LINUX01 (nécessite node-exporter installé sur cette machine, voir étape 7)
+  # SRV-LINUX01 (nécessite node-exporter installé sur cette machine)
   - job_name: "srv-linux01"
     static_configs:
       - targets: ["192.168.10.20:9100"]
 
-  # DC01 (nécessite windows_exporter installé, voir étape 7)
+  # DC01 (nécessite windows_exporter installé)
   - job_name: "dc01"
     static_configs:
       - targets: ["192.168.10.10:9182"]
