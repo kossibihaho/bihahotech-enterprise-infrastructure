@@ -2,6 +2,8 @@
 
 ## Architecture de sauvegarde
 
+A arranger plutard
+
 SRV-LINUX01 (source) MONITOR01 (copie secondaire)
 ├── Dumps DB (Nextcloud, │
 │ Wiki.js) │
