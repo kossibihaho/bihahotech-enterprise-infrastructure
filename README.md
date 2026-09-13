@@ -20,37 +20,8 @@ Simulation complète d'une infrastructure informatique d'entreprise fictive (**B
 
 ## Architecture
 
-```mermaid
-flowchart TD
-    INET([Internet])
-    PFS[PFSENSE01<br/>Pare-feu / Routeur / VPN]
-    LAN{{LAN interne<br/>192.168.10.0/24}}
+<img width="945" height="630" alt="image" src="https://github.com/user-attachments/assets/b65816c6-b210-4399-8f15-ebb0b5c43ff2" />
 
-    DC01[DC01<br/>AD DS · DNS · DHCP]
-    SRV[SRV-LINUX01<br/>Docker · Nginx]
-    MON[MONITOR01<br/>Prometheus · Grafana]
-    WIN[WIN11-CLIENT01]
-    UBU[UBUNTU-CLIENT01]
-
-    NC[Nextcloud]
-    WK[Wiki.js]
-    PT[Portainer]
-
-    INET <--> PFS
-    PFS <--> LAN
-    LAN --- DC01
-    LAN --- SRV
-    LAN --- MON
-    LAN --- WIN
-    LAN --- UBU
-
-    SRV --> NC
-    SRV --> WK
-    SRV --> PT
-
-    MON -.scrape.-> DC01
-    MON -.scrape.-> SRV
-```
 
 Le pare-feu **PFSENSE01** sépare le WAN (accès Internet via l'adaptateur Bridged) du LAN interne (Réseau interne VirtualBox `LAN-BIHAHO`). Tout le trafic LAN → Internet passe par des règles explicites (allow-list), pas de règle "allow all". Un accès distant est possible via **OpenVPN**, avec une autorité de certification interne dédiée.
 
