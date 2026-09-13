@@ -1,5 +1,8 @@
 # Stratégies de groupe (GPO) — bihahotech.local
 
+<img width="945" height="509" alt="image" src="https://github.com/user-attachments/assets/bb6fca97-1b52-48c9-a61a-55b188c25678" />
+
+
 ## GPO déployées
 
 Automatisées via `scripts/setup-gpo-bihahotech.ps1` (module PowerShell `GroupPolicy`).
