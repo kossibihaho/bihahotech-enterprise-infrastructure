@@ -1,15 +1,8 @@
 # Gestion des utilisateurs et groupes — Active Directory
 
 ## Structure des unités d'organisation (OU)
+<img width="945" height="509" alt="image" src="https://github.com/user-attachments/assets/5212d760-4ab7-4c7f-83bb-553220422806" />
 
-BIHAHO
-├── Direction
-├── IT
-├── RH
-├── Finance
-├── Serveurs
-├── Ordinateurs
-└── Utilisateurs
 
 
 ## Groupes de sécurité
