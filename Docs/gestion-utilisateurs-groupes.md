@@ -1,7 +1,9 @@
 # Gestion des utilisateurs et groupes — Active Directory
 
 ## Structure des unités d'organisation (OU)
-<img width="945" height="509" alt="image" src="https://github.com/user-attachments/assets/5212d760-4ab7-4c7f-83bb-553220422806" />
+
+<img width="945" height="505" alt="image" src="https://github.com/user-attachments/assets/ea5d111b-aab1-4116-856b-9a92a4414aa0" />
+
 
 
 
