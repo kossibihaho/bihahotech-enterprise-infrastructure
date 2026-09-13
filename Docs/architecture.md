@@ -4,37 +4,8 @@
 
 L'infrastructure BihahoTech simule un réseau d'entreprise segmenté, avec un pare-feu périmétrique séparant le réseau interne (LAN) de l'accès Internet (WAN).
 
-```mermaid
-flowchart TD
-    INET([Internet])
-    PFS[PFSENSE01<br/>Pare-feu / Routeur / VPN]
-    LAN{{LAN interne<br/>192.168.10.0/24}}
+<img width="945" height="630" alt="image" src="https://github.com/user-attachments/assets/9004cd3d-65d5-4d4e-8e7b-6df86d0d5332" />
 
-    DC01[DC01<br/>AD DS · DNS · DHCP]
-    SRV[SRV-LINUX01<br/>Docker · Nginx]
-    MON[MONITOR01<br/>Prometheus · Grafana]
-    WIN[WIN11-CLIENT01]
-    UBU[UBUNTU-CLIENT01]
-
-    NC[Nextcloud]
-    WK[Wiki.js]
-    PT[Portainer]
-
-    INET <--> PFS
-    PFS <--> LAN
-    LAN --- DC01
-    LAN --- SRV
-    LAN --- MON
-    LAN --- WIN
-    LAN --- UBU
-
-    SRV --> NC
-    SRV --> WK
-    SRV --> PT
-
-    MON -.scrape.-> DC01
-    MON -.scrape.-> SRV
-```
 
 ## Principes de conception
 
