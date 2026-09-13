@@ -61,46 +61,7 @@ Toutes les VM communiquent via le réseau interne VirtualBox `LAN-BIHAHO`, isol�
 
 ## Structure du dépôt
 
-```
-bihahotech-enterprise-infrastructure/
-│
-├── .gitignore
-├── README.md
-│
-├── Docs/
-│   ├── software.md
-│   ├── architecture.md
-│   ├── plan-adressage-ip.md
-│   ├── installation-pfsense.md
-│   ├── installation-dc01.md
-│   ├── installation-srv-linux01.md
-│   ├── installation-monitor01.md
-│   ├── gestion-utilisateurs-groupes.md
-│   ├── gestion-gpo.md
-│   └── procedure-restauration-borgbackup.md
-│
-├── configs/
-│   └── docker/
-│       ├── nextcloud/
-│       │   └── docker-compose.yml
-│       ├── portainer/
-│       │   └── docker-compose.yml
-│       ├── wiki/
-│       │   └── docker-compose.yml
-│       ├── nginx/
-│       │   ├── nextcloud.conf
-│       │   ├── wiki.conf
-│       │   └── portainer.conf
-│       └── monitoring/
-│           ├── docker-compose.yml
-│           ├── prometheus.yml
-│           └── alertmanager.yml
-│
-└── scripts/
-    ├── setup-ad-bihahotech.ps1
-    ├── setup-gpo-bihahotech.ps1
-    └── backup.sh
-```
+<img width="945" height="992" alt="image" src="https://github.com/user-attachments/assets/aa236474-aa53-4695-aac9-b5034ab18309" />
 
 ---
 
