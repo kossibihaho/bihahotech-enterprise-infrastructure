@@ -2,14 +2,7 @@
 
 ## Architecture de sauvegarde
 
-A arranger plutard
-
-SRV-LINUX01 (source) MONITOR01 (copie secondaire)
-├── Dumps DB (Nextcloud, │
-│ Wiki.js) │
-├── Config Docker │
-└── BorgBackup (chiffré, ──rsync/SSH──► Copie répliquée
-dédupliqué, local) du dépôt Borg
+<img width="762" height="378" alt="image" src="https://github.com/user-attachments/assets/c9482f65-b9f1-49de-b001-ec43961636fd" />
 
 
 Stratégie inspirée du principe **3-2-1** : au moins 2 copies (locale + MONITOR01), sur 2 supports différents (2 VM distinctes).
