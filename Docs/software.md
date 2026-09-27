@@ -62,8 +62,7 @@ Windows Server 2025 est utilisé pour mettre en place les services d'infrastruct
 ## 4. Windows 11
 
 **Version :** Windows 11 25H2  
-**Architecture :** x64  
-**Langue :** Français  
+**Architecture :** x64    
 **Fichier :** `Win11_25H2_French_x64.iso`
 
 Téléchargement officiel Microsoft :
