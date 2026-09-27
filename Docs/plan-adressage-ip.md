@@ -5,7 +5,7 @@
 | Segment | Réseau | Passerelle | Usage |
 |---|---|---|---|
 | LAN interne | 192.168.10.0/24 | 192.168.10.1 (pfSense) | Serveurs et postes clients |
-| Plage DHCP | 192.168.10.100 – 192.168.10.200 | — | Attribution automatique (clients) |
+| Plage DHCP | 192.168.10.100 - 192.168.10.200 | - | Attribution automatique (clients) |
 | VPN OpenVPN | 10.8.0.0/24 | 10.8.0.1 | Accès distant |
 | WAN | Dépend du réseau physique (box internet) | IP de la box | Sortie Internet (Bridged Adapter) |
 
@@ -24,7 +24,7 @@
 
 Le DHCP est géré par **DC01** (rôle Windows Server DHCP), et non par pfSense. pfSense a servi de DHCP temporaire uniquement pendant la phase d'installation initiale, avant que DC01 ne soit opérationnel.
 
-- Plage : 192.168.10.100 – 192.168.10.200
+- Plage : 192.168.10.100 - 192.168.10.200
 - Passerelle distribuée : 192.168.10.1
 - DNS distribué : 192.168.10.10
 
