@@ -109,4 +109,4 @@ Ce projet a été construit avec une approche *secure by default* (pare-feu en l
 
 ## Auteur
 
-Projet réalisé par **Kossi Bihaho** dans le cadre d'un apprentissage pratique en administration système, réseaux et DevOps.
+Projet réalisé par **Kossi Bihaho** dans le cadre de mon stage PFA chez Skoolution en DevOps & Infrastructure.
